@@ -1,0 +1,41 @@
+{
+    "name": "ahmed/gallery-images",
+    "description": "Laravel package to manage images with trait and API/web routes",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ahmed\\GalleryImages\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ahmed\\GalleryImages\\GalleryImagesServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Ahmed\\GalleryImages\\ComposerScripts::copyFiles"
+        ],
+        "post-update-cmd": [
+            "Ahmed\\GalleryImages\\ComposerScripts::copyFiles"
+        ]
+    },
+    "require": {
+        "require": {
+            "php": "^8.0",
+            "illuminate/support": "^9.0 || ^10.0",
+            "illuminate/database": "^9.0 || ^10.0",
+            "illuminate/filesystem": "^9.0 || ^10.0"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./gallery-images"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
